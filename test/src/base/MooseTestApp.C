@@ -33,6 +33,8 @@
 #include "MatCoefDiffusion.h"
 #include "FuncCoefDiffusion.h"
 #include "CoefReaction.h"
+#include "ExampleGainReactionRate.h"
+#include "ExampleLossReactionRate.h"
 #include "Convection.h"
 #include "PolyDiffusion.h"
 #include "PolyConvection.h"
@@ -131,6 +133,8 @@
 #include "MTMaterial.h"
 #include "TypesMaterial.h"
 #include "StatefulMaterial.h"
+#include "ExampleGainMaterial.h"
+#include "ExampleLossMaterial.h"
 #include "SpatialStatefulMaterial.h"
 #include "ComputingInitialTest.h"
 #include "StatefulTest.h"
@@ -320,6 +324,8 @@ MooseTestApp::registerObjects(Factory & factory)
   registerKernel(MatCoefDiffusion);
   registerKernel(FuncCoefDiffusion);
   registerKernel(CoefReaction);
+  registerKernel(ExampleGainReactionRate);
+  registerKernel(ExampleLossReactionRate);
   registerKernel(Convection);
   registerKernel(PolyDiffusion);
   registerKernel(PolyConvection);
@@ -432,6 +438,8 @@ MooseTestApp::registerObjects(Factory & factory)
   registerMaterial(MTMaterial);
   registerMaterial(TypesMaterial);
   registerMaterial(StatefulMaterial);
+  registerMaterial(ExampleGainMaterial);
+  registerMaterial(ExampleLossMaterial);
   registerMaterial(SpatialStatefulMaterial);
   registerMaterial(ComputingInitialTest);
   registerMaterial(StatefulTest);
